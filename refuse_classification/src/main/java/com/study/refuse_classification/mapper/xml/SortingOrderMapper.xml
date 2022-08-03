@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.study.refuse_classification.mapper.SortingOrderMapper">
+
+    <select id="getAllOrderByUserId" resultType="com.study.refuse_classification.entity.vo.OrderVO">
+        SELECT `order`.id, `type`, `order`.company_id AS companyId, `position`.name AS addressName,
+              `position`.address AS companyAddress, `order`.address_id AS addressId, address.name AS userName,
+               tel, province, city, district, address.address, status, anticipation_time AS anticipationTime, evaluate_weight AS evaluateWeight, item_detail AS itemDetail, fact_weight AS factWeight,
+               `order`.gmt_create AS gmtCreate
+        FROM sorting_order `order` , sorting_position `position` , user_address address
+        WHERE `order`.company_id=`position`.id and `order`.address_id = address.id and `order`.user_id = #{userId,jdbcType=CHAR} ORDER BY `order`.gmt_create DESC
+    </select>
+
+    <select id="getAllOrderByOrderQuery" resultType="com.study.refuse_classification.entity.vo.OrderVO"  parameterType="com.study.refuse_classification.entity.form.OrderQuery">
+        SELECT `order`.id, `type`, `order`.company_id AS companyId, `position`.name AS addressName,
+               `position`.address AS companyAddress, `order`.address_id AS addressId, address.name AS userName,
+               tel, province, city, district, address.address, status, anticipation_time AS anticipationTime, evaluate_weight AS evaluateWeight, item_detail AS itemDetail, fact_weight AS factWeight,
+               `order`.gmt_create AS gmtCreate
+        FROM sorting_order `order` , sorting_position `position` , user_address address
+        <where>
+            `order`.company_id = `position`.id and `order`.address_id = address.id
+            <if test="orderQuery.companyId!=null and orderQuery.companyId!=''">
+                and `order`.company_id = #{orderQuery.companyId,jdbcType=INTEGER}
+            </if>
+            <if test="orderQuery.type!=null and orderQuery.type!=''">
+                and `order`.type = #{orderQuery.type,jdbcType=INTEGER}
+            </if>
+            <if test="orderQuery.status!=null and orderQuery.status!=''">
+                and `order`.status = #{orderQuery.status,jdbcType=INTEGER}
+            </if>
+            <if test="orderQuery.address!=null and orderQuery.address!=''">
+                and `address`.address LIKE "%"#{orderQuery.address,jdbcType=VARCHAR}"%"
+            </if>
+            <if test="orderQuery.userName!=null and orderQuery.userName!=''">
+                and `address`.name LIKE "%"#{orderQuery.userName,jdbcType=VARCHAR}"%"
+            </if>
+            <if test="orderQuery.begin!=null and orderQuery.begin!=''">
+                and `order`.gmt_create > #{orderQuery.begin,jdbcType=TIMESTAMP}
+            </if>
+            <if test="orderQuery.end!=null and orderQuery.end!=''">
+                and #{orderQuery.end,jdbcType=TIMESTAMP} > `order`.gmt_create
+            </if>
+        </where>
+        ORDER BY `order`.gmt_create DESC
+    </select>
+</mapper>

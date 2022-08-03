@@ -1,0 +1,49 @@
+server:
+  port: 8080
+
+# 服务名
+spring:
+  application:
+    name: service-edu
+  profiles:
+    active: dev
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/refuse_classification?useSSL=false&useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT%2B8
+    username: root
+    password:
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+  redis:
+    host: 192.168.0.104
+    port: 6379
+    database: 0
+    timeout: 1800000
+    lettuce:
+      pool:
+        max-active: 20
+        max-wait: -1
+        max-idle: 5
+        min-idle: 0
+
+# 阿里云OSS配置
+aliyun:
+  oss:
+    file:
+      endpoint: 
+      keyid:
+      keysecret:
+      bucketname:
+
+auth:
+  wechat:
+    sessionHost:
+    appId:
+    secret:
+    grantType:
+
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  mapper-locations: com/study/refuse_classification/mapper/xml/*.xml

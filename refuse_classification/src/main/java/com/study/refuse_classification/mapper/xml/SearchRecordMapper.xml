@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.study.refuse_classification.mapper.SearchRecordMapper">
+    <select id="getRecordByUserId" resultType="com.study.refuse_classification.entity.vo.RecordVO">
+        SELECT record.id, item.parent_id, item.name, record.gmt_create AS gmtCreate
+        FROM sorting_item item, search_record record
+        WHERE item.id=record.item_id and record.user_id = #{userId,jdbcType=CHAR}
+        ORDER BY record.gmt_create DESC
+    </select>
+</mapper>
