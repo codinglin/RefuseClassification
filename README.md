@@ -38,7 +38,7 @@
 
 **个人中心模块**
 
-![image-20220803221726979](README.assets/image-20220803221726979.png)![image-20220803221811512](README.assets/image-20220803221811512.png)
+![image-20220803221811512](README.assets/image-20220803222719027.png)![image-20220803222750788](README.assets/image-20220803222750788.png)
 
 ### 2. 管理员页面
 
@@ -51,3 +51,4 @@
 ### 3. 后端项目目录
 
 ![image-20220803222116990](README.assets/image-20220803222116990.png)
+
