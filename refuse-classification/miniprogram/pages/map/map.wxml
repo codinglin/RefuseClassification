@@ -1,0 +1,8 @@
+<map id="map" scale="{{scale}}" markers="{{markers}}" longitude='{{longitude}}' latitude='{{latitude}}'
+  style='height:{{windowHeight}}vh;width:100%' show-compass="{{true}}" bindmarkertap="onMarkerTap">
+  <cover-view class="button search_all" bindtap="search" bindtap="doClickRecycle">回收</cover-view>
+  <!-- 查看全部 -->
+
+  <cover-view class="button show_all" bindtap="viewAll">一键回收</cover-view>
+ 
+</map>

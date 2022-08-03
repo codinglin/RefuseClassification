@@ -1,0 +1,98 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/examination/examination",
+    "pages/map/map",
+    "pages/me/me",
+    "pages/about/about",
+    "pages/kindInfo/kindInfo",
+    "pages/microphone/microphone",
+    "pages/photo/photo",
+    "pages/search/search",
+    "pages/question/question",
+    "pages/detail/detail",
+    "pages/article/article",
+    "pages/recycle/recycle",
+    "pages/companyInfo/companyInfo",
+    "pages/address_single/address_single",
+    "pages/address_panel/address_panel",
+    "pages/poi/poi",
+    "pages/navigation_walk/navigation",
+    "pages/navigation_walk_detail/navigation",
+    "pages/myComment/myComment",
+    "pages/searchRecord/searchRecord",
+    "pages/retrieveOrder/retrieveOrder",
+    "pages/myRetrieve/myRetrieve",
+    "pages/retrieveDetail/retrieveDetail",
+    "pages/takePhoto/takePhoto",
+    "pages/userConsole/userConsole",
+    "pages/storageConsole/storageConsole",
+    "pages/databaseGuide/databaseGuide",
+    "pages/addFunction/addFunction",
+    "pages/deployFunctions/deployFunctions",
+    "pages/chooseLib/chooseLib",
+    "pages/openapi/openapi",
+    "pages/openapi/serverapi/serverapi",
+    "pages/openapi/callback/callback",
+    "pages/openapi/cloudid/cloudid",
+    "pages/im/im",
+    "pages/im/room/room"
+  ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置"
+    }
+  },
+  "window": {
+    "backgroundColor": "#ffffff",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTitleText": "垃圾分类",
+    "navigationBarTextStyle": "black",
+    "pageOrientation": "portrait"
+  },
+  "tabBar": {
+    "color": "#959595",
+    "selectedColor": "#118fff",
+    "borderStyle": "white",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+      "pagePath": "pages/index/index",
+      "text": "分类",
+      "iconPath": "/images/sort.png",
+      "selectedIconPath": "/images/_sort.png"
+      },
+      {
+        "pagePath": "pages/examination/examination",
+        "text": "测试",
+        "iconPath": "/images/test.png",
+        "selectedIconPath": "/images/_test.png"
+      },
+      {
+        "pagePath": "pages/poi/poi",
+        "text": "回收",
+        "iconPath": "/images/map.png",
+        "selectedIconPath": "/images/_map.png"
+      },
+      {
+        "pagePath": "pages/me/me",
+        "text": "我的",
+        "iconPath": "/images/me.png",
+        "selectedIconPath": "/images/_me.png"
+      }
+  ]
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2",
+  "useExtendedLib": {
+    "weui": true
+  },
+  "usingComponents": {
+    "van-row": "@vant/weapp/row/index",
+    "van-col": "@vant/weapp/col/index",
+    "van-cell": "@vant/weapp/cell/index",
+    "van-cell-group": "@vant/weapp/cell-group/index"
+  }
+  
+}

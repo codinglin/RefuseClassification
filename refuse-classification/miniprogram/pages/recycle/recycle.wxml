@@ -1,0 +1,22 @@
+<view class="search_box">
+  <input class='search_input' type="text" confirm-type="search" placeholder="请输入要搜索的回收公司名称" bindconfirm="search" focus='{{focus}}'></input>
+</view>
+<block wx:if="{{stores}}" wx:for="{{stores}}" wx:key="id">
+  <navigator url="../companyInfo/companyInfo?id={{item.id}}&latitude={{item.latitude}}&longitude={{item.longitude}}">
+    <view class="card">
+      <view class="card_title">{{item.name}}</view>
+      <view class="card_infobar">
+        <view class="card_address">{{item.address}}</view>
+      </view>
+    </view>
+  </navigator>
+</block>
+<block wx:if="{{stores.length == 0 && !searched}}">
+  <view class="not_found">请点击上方搜索框输入要搜索的关键字</view>
+</block>
+<block wx:if="{{searched}}">
+  <view class="no_result_button">
+    没有找到回收站？
+    <navigator url="../list/list" open-type="redirect" class="button view_all">查看全部</navigator>
+  </view>
+</block>

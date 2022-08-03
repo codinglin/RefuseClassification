@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "van-steps": "@vant/weapp/steps/index",
+    "van-sticky": "@vant/weapp/sticky/index",
+    "van-panel": "@vant/weapp/panel/index"
+  },
+  "navigationBarTitleText": "订单详情"
+}

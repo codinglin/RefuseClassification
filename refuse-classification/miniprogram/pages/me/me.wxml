@@ -1,0 +1,37 @@
+<!--pages/me/me.wxml-->
+
+<import src="../../templates/login-popup.wxml" />
+
+<!-- 用户信息 -->
+<view class="userinfo">
+
+  <!-- 头像 -->
+  <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+
+  <view class='userinfo_right'>
+    <!-- 昵称 -->
+    <text class="userinfo_nickname">{{userInfo.isLogin !='' ? userInfo.nickName : '登录'}}</text>
+    <view class='userinfo_des_box'>
+      <!-- 更新信息按钮 -->
+      <!-- <view class="btn-update" wx:if="{{userInfo.isLogin !=''}}">
+        <button open-type="getUserInfo" bindgetuserinfo="refresh">更新信息</button>
+      </view> -->
+      <!-- 退出登录按钮 -->
+      <!-- <view class="btn-exit" catchtap="exit">{{userInfo.isLogin !='' ? '退出登录' : '清除缓存'}}</view> -->
+    </view>
+  </view>
+
+</view>
+<!-- <button open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="agreeGetUser">获取用户信息</button> -->
+<!-- 登录框 -->
+<template is="login-popup" data="{{show: isLoginPopup, userInfo: userInfo}}"></template>
+<block wx:if="{{userInfo.isLogin}}">
+  <view style="padding-top:20rpx;">
+    <van-cell title="地址管理" is-link value="" bindtap="doClickAddress" />
+    <van-cell title="文章列表" is-link value="" bindtap="doClickArticle" />
+    <van-cell title="我的评论" is-link value="" bindtap="doClickComment" />
+    <van-cell title="搜索记录" is-link value="" bindtap="doClickRecord" />
+    <van-cell title="我的回收" is-link value="" bindtap="doClickRetrieve" />
+    <!--<van-cell title="我的回收" is-link value="" arrow-direction="down" />-->
+  </view>
+</block>

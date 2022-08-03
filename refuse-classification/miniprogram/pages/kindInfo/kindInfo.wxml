@@ -1,0 +1,30 @@
+<!--miniprogram/pages/kindInfo/kindInfo.wxml-->
+<view class="view_main">
+
+<button class="button_kind" style="background:{{kindInfo.color}};">
+  <image class="image_kind" src="{{kindInfo.imgPath}}" mode="aspectFit" /> {{kindInfo.text}}
+</button>
+
+<view class="view_info">
+
+  <view class="view_info_title">
+    {{kindInfo.text}}：
+  </view>
+  <view class="view_info_txt">
+    {{kindInfo.description}}
+  </view>
+
+</view>
+
+<view class="view_dispose_info">
+
+  <view class="view_dispose_info_title">
+    ✤ 投放要求:
+  </view>
+  <view wx:for="{{kindInfo.dispose}}" wx:key="{{item}}" class="view_dispose_info_txt">
+    ☞{{item}}
+  </view>
+
+</view>
+
+</view>

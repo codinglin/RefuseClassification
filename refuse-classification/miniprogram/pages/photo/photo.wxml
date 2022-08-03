@@ -1,0 +1,18 @@
+<!--pages/photo/photo.wxml-->
+<!-- 调起摄像头拍照 -->
+<view class="camera_box">
+  <camera class="camera" wx:if="{{!show}}" device-position="back" flash="off" binderror="error">
+    <cover-view class="id_m">
+  
+    </cover-view>
+  </camera>
+  <image class="camera_img" src="{{src}}" wx:if="{{show}}"></image>
+  <view class="action">
+    <button class="takeBtn" type="primary" bindtap="takePhoto" wx:if="{{!show}}"></button>
+    <button class="saveImg" type="primary" bindtap="saveImg" wx:if="{{show}}"></button>
+    <button class="cancelBtn" wx:if="{{show}}" type="primary" bindtap="cancelBtn"></button>
+  </view>
+</view>
+
+<!-- END -->
+

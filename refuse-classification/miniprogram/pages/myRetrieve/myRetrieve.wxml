@@ -1,0 +1,12 @@
+<block wx:key="id" wx:for="{{orderList}}">
+  <van-panel data-id="{{item}}" title="服务站:{{item.addressName}}" desc="订单类型：{{item.type==1?'网络订单':'线下订单'}}"
+    status="{{item.gmtCreate}}" bindtap="doClickRetrieveDetail">
+    <text style="font-size:25rpx;" data-id="{{item}}" bindtap="doClickMarkerId">
+      预计上门时间：{{item.anticipationTime}}
+      预估重量：{{item.evaluateWeight}}kg
+      实际重量: {{item.factWeight==null?'等待公司人员录入':item.factWeight}}
+      状态 ：{{item.status==1?'等待接单':itemDetail==2?'正在上门':'订单完成'}}
+    </text>
+  </van-panel>
+  <van-divider/>
+</block>

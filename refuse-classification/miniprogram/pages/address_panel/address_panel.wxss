@@ -1,0 +1,16 @@
+/* pages/address_panel/address_panel.wxss */
+page{
+  background: rgb(247, 249, 253);
+}
+#imgAdd{
+  border-radius:50%;
+  height: 80rpx;
+  width: 80rpx;
+  position: absolute;
+  bottom: 50rpx;
+  right: 50rpx;
+}
+#title{
+  padding: 15rpx;
+  font-size: 25rpx;
+}

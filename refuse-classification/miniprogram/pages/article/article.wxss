@@ -1,0 +1,4 @@
+/* pages/article/article.wxss */
+Page{
+  background: white;
+}

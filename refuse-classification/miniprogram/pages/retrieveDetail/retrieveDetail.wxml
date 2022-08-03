@@ -1,0 +1,32 @@
+<van-steps steps="{{ steps }}" active="{{ order.status }}" />
+<van-sticky>
+  <van-panel>
+    <view style="padding-left:30rpx;">
+      姓名：{{order.userName}}
+    </view>
+    <view style="padding-left:30rpx">
+      联系电话：{{order.tel}}
+    </view>
+    <view style="padding-left:30rpx">
+      地址：{{order.province}}{{order.city}}{{order.district}}{{order.address}}
+    </view>
+    <view style="padding-left:30rpx">
+      预计时间：{{order.anticipationTime}}
+    </view>
+    <view style="padding-left:30rpx">
+      下单时间：{{order.gmtCreate}}
+    </view>
+    <view style="padding-left:30rpx">
+      预估重量：{{order.evaluateWeight}}kg
+    </view>
+    <view style="padding-left:30rpx">
+      订单物品：{{order.itemDetail}}
+    </view>
+    <view style="padding-left:30rpx">
+      服务点名称：{{order.addressName}}
+    </view>
+    <view style="padding-left:30rpx">
+      实际重量：{{order.factWeight==null?'等待公司人员录入':order.factWeight}}
+    </view>
+  </van-panel>
+</van-sticky>

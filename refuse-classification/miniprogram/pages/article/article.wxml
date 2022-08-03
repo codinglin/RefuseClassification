@@ -1,0 +1,12 @@
+<!-- 文章列表 -->
+<block wx:key="id" wx:for="{{articleList}}">
+  <van-card
+    style="padding-top:15rpx"
+    num="点击量:{{item.pageviews}}"
+    desc="{{item.gmtCreate}}"
+    title="{{item.title}}"
+    thumb="{{item.pic}}"
+    data-id="{{item.id}}"
+    bindtap="doClickDetail"
+  />
+</block>

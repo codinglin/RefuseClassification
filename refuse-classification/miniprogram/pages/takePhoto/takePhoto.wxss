@@ -1,0 +1,91 @@
+/**index.wxss**/
+Page{
+  background: white;
+}
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+
+.view_info_txts {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  /* background-color: yellow; */
+}
+
+.view_modal_scan_txt {
+  padding: 20rpx;
+  margin-left: 30rpx;
+  margin-top: 20rpx;
+  font-size: 15px;
+  border: 1px solid #3cb371;
+  border-radius: 10rpx;
+  background-color: white;
+}
+
+.view_modal_main {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.button_modal_kind {
+  margin-top: 20rpx;
+  color: white;
+  width: 200rpx;
+  height: 200rpx;
+  font-size: 13px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.image_modal_kind {
+  margin-top: 20rpx;
+  width: 90%;
+  height: 90%;
+}
+
+.view_modal_info {
+  margin-top: 30rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+}
+
+.view_modal_info_title {
+  margin-left: 20rpx;
+  margin-bottom: 10rpx;
+  color: red;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.view_modal_info_txt {
+  color: black;
+  margin-left: 20rpx;
+  margin-bottom: 5rpx;
+  font-size: 14px;
+}

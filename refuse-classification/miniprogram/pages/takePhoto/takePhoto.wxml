@@ -1,0 +1,40 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="userinfo" style="padding-top:500rpx;">
+    <button type='primary' bindtap='choose'>选择照片</button>
+  </view>
+</view>
+
+<!-- 显示搜索项目 -->
+<van-cell-group wx:if="{{inputTxt!=null}}" wx:for="{{searchItmes}}" wx:key="{{item.id}}" style="width:90%">
+  <van-cell id="{{item.id}}" data-type="{{item.sortName}}" data-name="{{item.name}}"
+    title="{{item.name}}:  {{item.count}}" value="{{item.sortName}}" bindtap="doClickItem" />
+</van-cell-group>
+
+<!-- 弹框显示搜索项目的详细信息 -->
+<modal hidden="{{isHiddenInfoModal}}" title="{{selectItem._txt}}" no-cancel="true" confirm-text="确定"
+  bindconfirm="modal_hidden" bindcancel="modal_hidden">
+  <view class="view_modal_main">
+    <button class="button_modal_kind" style="background:{{selectItem._type.color}};">
+      <image class="image_modal_kind" src="{{selectItem._type.imgPath}}" mode="aspectFit" /> {{selectItem._type.text}}
+    </button>
+    <view class="view_modal_info">
+      <view class="view_modal_info_title">
+        ✤投放要求:
+      </view>
+      <view wx:for="{{selectItem._type.dispose}}" wx:key="{{item}}" class="view_modal_info_txt">
+        ☞{{item}}
+      </view>
+    </view>
+  </view>
+</modal>
+
+<!-- 弹框显示扫描到的五篇 -->
+<modal hidden="{{isHiddenScanModal}}" title="选择识别的物品" no-cancel="true" confirm-text="取消" bindconfirm="modal_hidden"
+  bindcancel="modal_hidden">
+  <view class="view_info_txts">
+    <view class="view_modal_scan_txt" data-name="{{itemDetail}}" bindtap="doClickScanItem">
+      {{itemDetail}}
+    </view>
+  </view>
+</modal>

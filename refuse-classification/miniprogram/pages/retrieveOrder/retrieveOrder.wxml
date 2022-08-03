@@ -1,0 +1,57 @@
+<!--index.wxml-->
+<view class="weui-flex time-component">
+  <!-- icon -->
+  <view class="placeholder icon">
+    <image src='../../images/time.png' class='icon-img'></image>
+  </view>
+  <!-- 开始时间 -->
+  <view class="placeholder hd">预约上门</view>
+
+  <!-- 日期选择 -->
+  <view class="placeholder date">
+    <picker mode="multiSelector" value="{{dateTime}}" bindcolumnchange="changeDateTimeColumn" range="{{dateTimeArray}}">
+      <view class="tui-picker-detail">
+        {{dateTimeArray[0][dateTime[0]]}}-{{dateTimeArray[1][dateTime[1]]}}-{{day}}
+      </view>
+    </picker>
+  </view>
+  <view class='placeholder line'>|</view>
+  <!-- 时间选择 -->
+  <view class="placeholder time">
+    <picker mode="time" value="{{time}}" start="00:00" end="23:59" bindchange="bindTimeChange">
+      <view class="picker">{{time}}</view>
+    </picker>
+  </view>
+
+</view>
+
+<br/>
+
+<van-cell-group style="padding-top:30rpx">
+  <van-field
+    value="{{ addressName }}"
+    clearable
+    label="选择地址"
+    icon="question-o"
+    placeholder="选择地址"
+    bindtap="doClickAddress"
+  />
+</van-cell-group>
+
+<van-cell-group>
+  <van-field
+    bindinput="bindEstimatedWeight" 
+    value= "{{estimatedWeight}}"
+    clearable
+    label="预估重量"
+    icon="question-o"
+    placeholder="单位千克"
+  />
+</van-cell-group>
+
+
+<van-cell-group>
+  <van-field bindinput="bindMessage"  value="{{ message }}" label="物品详情" type="textarea" placeholder="请输入有哪些物品" autosize border="{{ false }}" />
+</van-cell-group>
+
+<van-submit-bar button-text="提交订单"  bindtap="doClickSubmit"/>

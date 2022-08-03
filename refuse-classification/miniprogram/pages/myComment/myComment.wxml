@@ -1,0 +1,5 @@
+<block wx:key="id" wx:for="{{commentList}}">
+<van-panel data-id="{{item.articleId}}" title="文章标题:{{item.title}}" desc="{{item.content}}" status="{{item.gmtCreate}}" bindtap="doClickDetail">
+</van-panel>
+<br/>
+</block>

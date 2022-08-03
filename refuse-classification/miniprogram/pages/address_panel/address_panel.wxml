@@ -1,0 +1,15 @@
+<!--pages/address_panel/address_panel.wxml-->
+<view id="title">地址管理</view>
+<block wx:key="id" wx:for="{{addressList}}">
+  <van-panel title="{{item.name}}" desc="手机: {{item.tel}}" status="{{item.isDefault?'默认':''}}" data-id="{{item}}" use-footer-slot>
+    <view style="padding-left:30rpx;font-size:28rpx;" data-id="{{item}}"  bindtap="doClickMarkerId">地址：{{item.province}}{{item.city}}{{item.district}}{{item.address}}
+    </view>
+    <view slot="footer" style="padding-left:20rpx">
+      <van-button size="small" data-id="{{item}}"  bindtap="doClickUpdateAddress">编辑</van-button>
+      <van-button style="padding-left:20rpx" size="small" type="danger"  data-id="{{item}}"  bindtap="handleLongPress">删除</van-button>
+    </view>
+  </van-panel>
+  <van-divider />
+</block>
+<van-dialog use-slot title="确定要删除吗？" show="{{ show }}" show-cancel-button bind:confirm="onClose" />
+<image id="imgAdd" src="../../images/add.png" bindtap="doClickAddressSingle"></image>

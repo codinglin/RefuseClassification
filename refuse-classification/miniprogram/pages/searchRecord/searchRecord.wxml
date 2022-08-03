@@ -1,0 +1,5 @@
+<block wx:key="id" wx:for="{{recordList}}">
+<van-panel data-id="{{item.id}}" title="物品:{{item.name}}" desc="类别:{{item.category}}" status="{{item.gmtCreate}}">
+</van-panel>
+<br/>
+</block>

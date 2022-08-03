@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "van-divider": "@vant/weapp/divider/index",
+    "van-dialog": "@vant/weapp/dialog/index",
+    "van-panel": "@vant/weapp/panel/index"
+  },
+  "navigationBarTitleText": "地址管理"
+}

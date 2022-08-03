@@ -1,0 +1,48 @@
+<view class="view_main">
+  <Swiper imgUrls="{{imgUrls}}" />
+  <view style="clear: both"></view>
+  <!-- 轮播消息 -->
+  <image class="swiper-image" src="../../images/notice.jpg" mode="heightFix"></image>
+  <swiper class="swiper-notice" indicator-dots="{{indicatorDots}}" interval="{{interval}}" autoplay="{{autoplay}}"
+    vertical="true">
+    <block wx:key="id" wx:for="{{notice}}">
+      <swiper-item>
+        <view class="swiper-desc">
+          <text bindtap="doClickDetail" data-item="{{item.id}}">{{item.title}}</text>
+        </view>
+      </swiper-item>
+    </block>
+  </swiper>
+  <view style="clear: both"></view>
+  <view class="selected-nav" style="padding-bottom:40rpx"></view>
+  <!-- </view> -->
+  <view class="selected-nav-list">
+    <block wx:key="id" wx:for="{{kindList}}">
+      <view class="selected-nav-item">
+        <view>
+          <image mode="aspectFill" src="{{item.imgPath}}" data-item="{{item}}" bindtap="doClick"></image>
+        </view>
+        <view>
+          <text>{{item.text}}</text>
+        </view>
+      </view>
+    </block>
+  </view>
+  <view class="place">
+    <view class="bt-image">
+      <view class="txt">
+        <image class="im1" src="/images/palyPhoto.png" bindtap="doClickPhoto"></image>
+      </view>
+    </view>
+    <view class="bt-image">
+      <view class="txt">
+        <image class="im" src="/images/searchInfo.png" bindtap="doClickSearch"></image>
+      </view>
+    </view>
+    <view class="bt-image">
+      <view class="txt">
+        <image class="im1" src="/images/microphonePhoto.png" bindtap="doClickMicrophone"></image>
+      </view>
+    </view>
+  </view>
+</view>

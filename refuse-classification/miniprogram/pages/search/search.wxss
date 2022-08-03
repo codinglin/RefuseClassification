@@ -1,0 +1,156 @@
+/* pages/search/search.wxss */
+.view_main {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.view_search {
+  width: 90%;
+  margin-top: 20rpx;
+  height: 80rpx;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  border: 2px solid #3cb371;
+  border-radius: 25px;
+  background-color: white;
+}
+
+.image_type {
+  width: 100rpx;
+  height: 50rpx;
+}
+
+.input_type {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+}
+
+.button_type {
+  width: 100rpx;
+  height: 50rpx;
+}
+
+.view_info {
+  margin-top: 20rpx;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.view_info_title {
+  margin-left: 50rpx;
+  width: 100%;
+  color: red;
+  display: flex;
+}
+
+.view_info_txts {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  /* background-color: yellow; */
+}
+
+.button_info_txt {
+  margin-left: 30rpx;
+  margin-top: 10rpx;
+  font-size: 13px;
+  border: 1px solid #3cb371;
+  background-color: white;
+  /* border-radius: 5px; */
+}
+
+.view_search_show {
+  margin-top: 20rpx;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.view_search_item {
+  margin-top: 5rpx;
+  margin-bottom: 2px;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  background-color: white;
+  box-shadow: 1.5px 1.5px 1.5px grey;
+}
+
+.text_search_item {
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+  margin-left: 20rpx;
+  /* color: #3cb371; */
+  font-size: 16px;
+}
+
+.view_modal_main {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.button_modal_kind {
+  margin-top: 20rpx;
+  color: white;
+  width: 200rpx;
+  height: 200rpx;
+  font-size: 13px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.image_modal_kind {
+  margin-top: 20rpx;
+  width: 90%;
+  height: 90%;
+}
+
+.view_modal_info {
+  margin-top: 30rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+}
+
+.view_modal_info_title {
+  margin-left: 20rpx;
+  margin-bottom: 10rpx;
+  color: red;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.view_modal_info_txt {
+  color: black;
+  margin-left: 20rpx;
+  margin-bottom: 5rpx;
+  font-size: 14px;
+}
+
+.view_modal_scan_txt {
+  padding: 20rpx;
+  margin-left: 30rpx;
+  margin-top: 20rpx;
+  font-size: 15px;
+  border: 1px solid #3cb371;
+  border-radius: 10rpx;
+  background-color: white;
+}

@@ -1,0 +1,34 @@
+/* pages/map/map.wxss */
+.show_all{
+  position: absolute;
+  right: 100rpx;
+  bottom: 100rpx;
+  color: #7795f8;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 4px 6px rgba(50,50,93,.11), 0 1px 3px rgba(0,0,0,.08);
+}
+
+.search_all{
+  position: absolute;
+  left: 100rpx;
+  bottom: 100rpx;
+  color: #7795f8;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 4px 6px rgba(50,50,93,.11), 0 1px 3px rgba(0,0,0,.08);
+}
+
+.button {
+  color: #fff;
+  height: 100rpx;
+  width: 220rpx;
+  line-height: 100rpx;
+  font-size: 35rpx;
+  text-align: center;
+  background-color: rgb(62, 207, 142);
+  border-radius: 50rpx;
+  box-shadow: 0 4px 6px rgba(50,50,93,.11), 0 1px 3px rgba(0,0,0,.08);
+}
+
+.ser{
+  padding: 0rpx 0rpx 20rpx 0rpx;
+}

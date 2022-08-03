@@ -1,0 +1,56 @@
+/* pages/microphone/microphone.wxss */
+
+.answer{
+  width:750rpx;
+  height: 100rpx;
+  font-size: 38rpx;
+}
+
+.mean{
+  width: 700rpx;
+  padding: 25rpx;
+  background-color: rgb(240, 240, 240);
+  height: 750rpx;
+  margin:20rpx 0rpx 80rpx 0rpx;
+}
+.mean>text{
+  width: 100%;
+  line-height: 45rpx;
+  margin-bottom: 200rpx;
+}
+
+.footer{
+  width: 750rpx;
+  display:flex;
+  justify-content: space-around;
+}
+
+.footer .round{
+  width: 50rpx;
+  height: 50rpx;
+  padding: 20rpx;
+  border-radius: 90rpx;
+  box-shadow: 15rpx 15rpx 15rpx gainsboro;
+  position: relative;
+}
+.round image{
+  width: 50rpx;
+  height: 50rpx;
+}
+
+.mask{
+  z-index: 99;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.7;
+  position: absolute;
+}
+
+.recording{
+  width: 250rpx;
+  z-index: 100;
+  position: absolute;
+  top: 200rpx;
+  left: 250rpx;
+}

@@ -1,0 +1,71 @@
+/* pages/me/me.wxss */
+/* 用户信息 */
+
+.userinfo {
+  display: flex;
+  align-items: center;
+  background-color: #118fff;
+  height: 300rpx;
+}
+
+/* 头像 */
+
+.userinfo-avatar {
+  width: 140rpx;
+  height: 140rpx;
+  margin-left: 48rpx;
+  border-radius: 20rpx;
+  background: #f5f7f7;
+}
+
+.userinfo_right {
+  margin-left: 40rpx;
+  color: #fff;
+}
+
+.userinfo_nickname {
+  font-size: 48rpx;
+  font-weight: 600;
+  line-height: 1;
+  display: block;
+}
+
+/* 用户角色 */
+
+.userinfo_des_box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 16rpx;
+}
+
+.userinfo_role {
+  display: block;
+  font-size: 13px;
+}
+
+/* 更新信息按钮 */
+
+.btn-update {
+  font-size: 20rpx;
+  color: #fff;
+}
+
+.btn-update>button, .btn-exit {
+  height: 40rpx;
+  padding: 0 16rpx;
+  margin-left: 24rpx;
+  border: 4rpx solid rgba(255, 255, 255, .2);
+  border-radius: 20rpx;
+  background-color: transparent;
+  box-sizing: border-box;
+  opacity: 0.6;
+  font-size: 10px;
+  color: #fff;
+  line-height: 32rpx;
+}
+
+.btn-update>button::after {
+  border: none;
+}

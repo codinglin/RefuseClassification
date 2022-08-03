@@ -1,0 +1,18 @@
+<view class="section">
+  <input data-city="{{city}}" data-longitude="{{longitude}}" data-latitude="{{latitude}}" bindtouchstart="bindInput" placeholder="搜索"/>
+</view>
+<view class="map_container">
+  <map class="map" id="map" longitude="{{longitude}}" latitude="{{latitude}}" scale="14" show-location="true" markers="{{markers}}" bindmarkertap="makertap"></map>
+</view>
+<view class="map_text">
+  <view class="map-1" bindtap="getRoute">
+    <!-- <image src="../../images/jt.png"></image> -->
+    <view>到服务点</view>
+  </view>
+  <view class="map-2" bindtap="getRetrieve">
+    <!-- <image src="../../images/jt.png"></image> -->
+    <view>上门回收</view>
+  </view>
+  <text class="h1">{{textData.name}}</text>
+  <text>{{textData.desc}}</text>
+</view>

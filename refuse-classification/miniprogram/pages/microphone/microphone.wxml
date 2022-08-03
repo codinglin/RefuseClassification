@@ -1,0 +1,22 @@
+<view class="mean column">
+  <text>识别结果：{{result}}</text>
+</view>
+ 
+<view class="footer row">
+  <view class="round row" style="width:70rpx;height:70rpx;z-index:100;" 
+    hover-class="hover-class" bindtouchstart="{{authed?'start_record':''}}"
+    bindtouchend="{{authed?'stop_record':''}}">
+    <image src="../../images/record.png" style="width:70rpx;height:70rpx;"></image>
+    <text>按住说话</text>
+  </view>
+</view>
+
+<!-- 按住说话时的灰色蒙层 -->
+<view class="mask" wx:if="{{recording}}">
+</view>
+
+<!-- 按住说话时，蒙层上的gif -->
+<image src="../../images/recording.gif"
+  class="recording" mode="widthFix"
+  wx:if="{{recording}}">
+</image>
